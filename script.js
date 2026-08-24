@@ -23,3 +23,11 @@ let arr = [
 {
         title:"Spidey",image:"https://i.pinimg.com/736x/b2/75/51/b2755102ac1167ac0f2da09b026372e6.jpg"
 },]
+let container = document.querySelector('.container');
+let cardShow = '';
+arr.forEach(function(elem){
+        cardShow += `<div class="card">
+            <img src="${elem.image}" alt="">
+        </div>`
+        container.innerHTML = cardShow;
+});
