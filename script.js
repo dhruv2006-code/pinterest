@@ -28,6 +28,21 @@ let cardShow = '';
 arr.forEach(function(elem){
         cardShow += `<div class="card">
             <img src="${elem.image}" alt="">
-        </div>`
+            </div>`
         container.innerHTML = cardShow;
 });
+let search = document.querySelector('#search')
+search.addEventListener('click',function(){
+    container.style.opacity = '0.2'
+        
+})
+search.addEventListener('mouseleave',function(){
+    container.style.opacity = '1'
+        
+})
+search.addEventListener('input',function(){
+       let arrSuggestion = [search.value];
+       arrSuggestion.filter(function(val){
+                
+       })
+})
