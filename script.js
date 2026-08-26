@@ -22,9 +22,27 @@ let arr = [
 },
 {
         title:"Spidey",image:"https://i.pinimg.com/736x/b2/75/51/b2755102ac1167ac0f2da09b026372e6.jpg"
+},
+{
+        title:"Spidey",image:"https://i.pinimg.com/1200x/09/f8/36/09f836d6812b22fe7a3f3a5d213ea456.jpg"
+},
+{
+        title:"land",image:"https://in.pinterest.com/pin/19844054605647636/"
+},
+{
+        title:"Sa",image:"https://i.pinimg.com/1200x/2b/41/52/2b4152c30f7eb33f4325a4b903002136.jpg"
+},
+{
+        title:"Inve",image:"https://i.pinimg.com/736x/c3/26/fd/c326fdc039f6432bb1237e992f266738.jpg"
+},
+{
+        title:"Ght",image:"https://i.pinimg.com/736x/62/fa/88/62fa88ef257c67b904778c023f627711.jpg"
+},
+{
+        title:"Sp",image:"https://i.pinimg.com/736x/af/f9/e3/aff9e343f9998953ce140e8af2cf5385.jpg"
 },{
         title:"Spidey",image:"https://i.pinimg.com/1200x/09/f8/36/09f836d6812b22fe7a3f3a5d213ea456.jpg"
-},]
+}]
 let container = document.querySelector('.container');
 let cardShow = '';
 arr.forEach(function(elem){
