@@ -117,7 +117,6 @@ header{
     margin-bottom: 10px;
 }
 .suggestion{
-    visibility: hidden;
     width: 95%;
     border-radius: 10px;
     margin-top: 0.2rem;

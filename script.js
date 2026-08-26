@@ -44,16 +44,15 @@ search.addEventListener('blur',function(){
 })
 let suggestion = document.querySelector('.suggestion');
 search.addEventListener('input',function(){
-         
-let filtered = arr.filter(function(val){
-        return val.title.toLowerCase().startsWith(search.value)
-})
-        let searchSuggest = '';
-        filtered.forEach(elem => {
-                searchSuggest += `<div class="suggestion">
+         let filteredArr = arr.filter(function(val){
+                return val.title.toLowerCase().startsWith(search.value);
+             
+         })
+            let searchSuggestion = '';
+                filteredArr.forEach(function(elem){
+                        searchSuggestion += `<div class="suggestion">
             <h3>${elem.title}</h3>
         </div>`
-        });
-       suggestion.style.visibility = 'visible'
-        suggestion.innerHTML = searchSuggest;
+                })
+                suggestion.innerHTML = searchSuggestion;
 })
