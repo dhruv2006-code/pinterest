@@ -22,6 +22,8 @@ let arr = [
 },
 {
         title:"Spidey",image:"https://i.pinimg.com/736x/b2/75/51/b2755102ac1167ac0f2da09b026372e6.jpg"
+},{
+        title:"Spidey",image:"https://i.pinimg.com/1200x/09/f8/36/09f836d6812b22fe7a3f3a5d213ea456.jpg"
 },]
 let container = document.querySelector('.container');
 let cardShow = '';
@@ -32,17 +34,26 @@ arr.forEach(function(elem){
         container.innerHTML = cardShow;
 });
 let search = document.querySelector('#search')
-search.addEventListener('click',function(){
+search.addEventListener('focus',function(){
     container.style.opacity = '0.2'
         
 })
-search.addEventListener('mouseleave',function(){
+search.addEventListener('blur',function(){
     container.style.opacity = '1'
         
 })
+let suggestion = document.querySelector('.suggestion');
 search.addEventListener('input',function(){
-       let arrSuggestion = [search.value];
-       arrSuggestion.filter(function(val){
-                
-       })
+         
+let filtered = arr.filter(function(val){
+        return val.title.toLowerCase().startsWith(search.value)
+})
+        let searchSuggest = '';
+        filtered.forEach(elem => {
+                searchSuggest += `<div class="suggestion">
+            <h3>${elem.title}</h3>
+        </div>`
+        });
+       suggestion.style.visibility = 'visible'
+        suggestion.innerHTML = searchSuggest;
 })

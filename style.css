@@ -116,3 +116,13 @@ header{
     object-fit: cover;
     margin-bottom: 10px;
 }
+.suggestion{
+    visibility: hidden;
+    width: 95%;
+    border-radius: 10px;
+    margin-top: 0.2rem;
+    padding: 1rem 3rem;
+    color: black;
+    background-color: rgba(128, 128, 128, 0.247);
+    
+}
