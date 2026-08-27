@@ -115,6 +115,7 @@ header{
     border-radius: 10px;
     object-fit: cover;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 .suggestion{
     width: 95%;

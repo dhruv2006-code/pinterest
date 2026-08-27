@@ -72,5 +72,13 @@ search.addEventListener('input',function(){
             <h3>${elem.title}</h3>
         </div>`
                 })
+                suggestion.style.display = 'block';
                 suggestion.innerHTML = searchSuggestion;
+})
+let card = document.querySelectorAll('.card');
+card.forEach(function(imgSect,index){        
+        imgSect.addEventListener('click',function(){
+             console.log(arr[index])
+                            
+        })
 })
