@@ -51,6 +51,7 @@ arr.forEach(function(elem){
             </div>`
         container.innerHTML = cardShow;
 });
+
 let search = document.querySelector('#search')
 search.addEventListener('focus',function(){
     container.style.opacity = '0.2'
@@ -78,7 +79,25 @@ search.addEventListener('input',function(){
 let card = document.querySelectorAll('.card');
 card.forEach(function(imgSect,index){        
         imgSect.addEventListener('click',function(){
-             console.log(arr[index])
+             let imgShow = arr[index].image;
+             let titleShow = arr[index].title;
+                container.innerHTML  = `<div class="preview">
+            <img src="${imgShow}" alt="">
+            <div class="info">
+                 <div class="preview-icons">
+                 <i class="ri-heart-2-line"></i>
+        <i class="ri-save-line"></i>
+        <i class="ri-share-2-line"></i>
+        <i class="ri-more-fill"></i>
+        </div>
+                <div class="title-info">
+                    <img src="${imgShow}" alt="">
+                    <h2>${titleShow}</h2>
+                </div>
+                <h5>description......</h5>
+            </div>
+        </div>`
+             
                             
         })
 })
