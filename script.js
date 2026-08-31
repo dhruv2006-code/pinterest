@@ -78,26 +78,17 @@ search.addEventListener('input',function(){
 })
 let card = document.querySelectorAll('.card');
 card.forEach(function(imgSect,index){        
+        let preview = document.querySelector('.preview')
+        let img = document.querySelector('#main-img')
+        let title = document.querySelector('#title')
+        let description = document.querySelector('#description')
+        let secImg = document.querySelector('#second-image')
         imgSect.addEventListener('click',function(){
              let imgShow = arr[index].image;
              let titleShow = arr[index].title;
-                container.innerHTML  = `<div class="preview">
-            <img src="${imgShow}" alt="">
-            <div class="info">
-                 <div class="preview-icons">
-                 <i class="ri-heart-2-line"></i>
-        <i class="ri-save-line"></i>
-        <i class="ri-share-2-line"></i>
-        <i class="ri-more-fill"></i>
-        </div>
-                <div class="title-info">
-                    <img src="${imgShow}" alt="">
-                    <h2>${titleShow}</h2>
-                </div>
-                <h5>description......</h5>
-            </div>
-        </div>`
-             
-                            
+             img.src = imgShow;
+             title.innerHTML = titleShow;
+             preview.style.visibility = "visible";
+             secImg.src = imgShow;
         })
 })
