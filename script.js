@@ -84,11 +84,17 @@ card.forEach(function(imgSect,index){
         let description = document.querySelector('#description')
         let secImg = document.querySelector('#second-image')
         imgSect.addEventListener('click',function(){
+                container.style.display = "none";
              let imgShow = arr[index].image;
              let titleShow = arr[index].title;
              img.src = imgShow;
              title.innerHTML = titleShow;
              preview.style.visibility = "visible";
              secImg.src = imgShow;
+        })
+                let back = document.querySelector('#back');
+        back.addEventListener('click',function(){
+                preview.style.display = "none";
+                container.style.display = "block"
         })
 })

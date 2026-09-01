@@ -57,6 +57,7 @@ html,body{
 }
 main{
     margin-left: 88px;
+    position: relative;
 }
 header{
     padding: 1rem 0rem;
@@ -125,12 +126,14 @@ header{
     background-color: rgba(128, 128, 128, 0.247);
 }
 .preview{
+    position: absolute;
     visibility: hidden;
     padding: 1rem;
     width: 95%;
     border-radius: 30px;
-    background-color: grey;
+    background-color: rgba(128, 128, 128, 0.109);
     display: flex;
+    gap: 10px;
 }
 .preview .info{
     position: relative;
@@ -154,6 +157,7 @@ header{
     height: 30px;
     width: 30px;
     object-fit: cover;
+    object-position: top;
     border-radius: 50%;
 
 }
@@ -164,4 +168,15 @@ header{
     gap: 2rem;
     font-size: 1.5rem;
     margin-bottom: 2rem ;
+}
+.preview #back{
+    padding: 10px 12px;
+    font-size: 1.5rem;
+    height: fit-content;
+    background-color: rgba(188, 188, 188, 0.472);
+    border-radius: 15px;
+}
+#back:hover{
+    background-color: rgba(188, 188, 188, 0.74);
+    cursor: pointer;
 }
